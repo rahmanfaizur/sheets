@@ -13,11 +13,11 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
     return 'text-gray-900';
   };
 
-  const getStatusBgColor = (text: string) => {
-    // if (text.includes('Run condition not met')) return 'bg-orange-50';
-    // if (text.includes('An error occurred')) return 'bg-red-50';
-    return 'bg-white';
-  };
+  // const getStatusBgColor = (text: string) => {
+  //   // if (text.includes('Run condition not met')) return 'bg-orange-50';
+  //   // if (text.includes('An error occurred')) return 'bg-red-50';
+  //   return 'bg-white';
+  // };
 
   return (
     <div className="overflow-x-auto">
@@ -109,22 +109,22 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
                   <span>{row.linkedinJobUrl}</span>
                 </div>
               </td>
-              <td className={`px-4 py-3 text-sm border-b border-gray-200 ${getStatusBgColor(row.waterfallPeople1)}`}>
+              <td className={`px-4 py-3 text-sm border-b border-gray-200`}>
                 <span className={getStatusColor(row.waterfallPeople1)}>
                   {row.waterfallPeople1}
                 </span>
               </td>
-              <td className={`px-4 py-3 text-sm border-b border-gray-200 ${getStatusBgColor(row.enrichCompany2)}`}>
+              <td className={`px-4 py-3 text-sm border-b border-gray-200`}>
                 <span className={getStatusColor(row.enrichCompany2)}>
                   {row.enrichCompany2}
                 </span>
               </td>
-              <td className={`px-4 py-3 text-sm border-b border-gray-200 ${getStatusBgColor(row.domainFromEmail)}`}>
+              <td className={`px-4 py-3 text-sm border-b border-gray-200`}>
                 <span className={getStatusColor(row.domainFromEmail)}>
                   {row.domainFromEmail}
                 </span>
               </td>
-              <td className={`px-4 py-3 text-sm border-b border-gray-200 ${getStatusBgColor(row.waterfallPeople2)}`}>
+              <td className={`px-4 py-3 text-sm border-b border-gray-200`}>
                 <span className={getStatusColor(row.waterfallPeople2)}>
                   {row.waterfallPeople2}
                 </span>

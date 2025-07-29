@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Bookmark, MoreHorizontal, Cloud, ChevronDown, ArrowLeft } from 'lucide-react';
+import { Star, MoreHorizontal, Cloud, ArrowLeft } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
