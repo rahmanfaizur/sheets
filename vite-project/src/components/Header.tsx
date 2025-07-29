@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Bookmark, MoreVertical, Cloud, ChevronDown } from 'lucide-react';
+import { Star, Bookmark, MoreHorizontal, Cloud, ChevronDown, ArrowLeft } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -7,14 +7,14 @@ const Header: React.FC = () => {
       {/* Left side */}
       <div className="flex items-center space-x-3">
         <button className="text-gray-400 hover:text-gray-600">
-          <Star className="w-5 h-5" />
+          <ArrowLeft className="w-5 h-5" />
         </button>
         <button className="text-gray-400 hover:text-gray-600">
-          <Bookmark className="w-5 h-5" />
+          <Star className="w-5 h-5" />
         </button>
         <h1 className="text-lg font-semibold text-gray-900">Bitscale workbook</h1>
         <button className="text-gray-400 hover:text-gray-600">
-          <MoreVertical className="w-5 h-5" />
+          <MoreHorizontal className="w-5 h-5" />
         </button>
       </div>
 
