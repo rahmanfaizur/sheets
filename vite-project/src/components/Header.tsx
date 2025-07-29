@@ -29,16 +29,6 @@ const Header: React.FC = () => {
           <div className="w-4 h-4 bg-green-500 rounded"></div>
           <span>2,450,005/9,999,999</span>
         </div>
-        
-        <button className="flex items-center space-x-1 px-3 py-1.5 text-sm text-gray-700 bg-gray-100 rounded hover:bg-gray-200">
-          <span>Action</span>
-          <ChevronDown className="w-4 h-4" />
-        </button>
-        
-        <button className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
-          <Star className="w-4 h-4" />
-          <span>Enrichment</span>
-        </button>
       </div>
     </div>
   );

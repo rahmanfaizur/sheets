@@ -9,7 +9,7 @@ const Workbook: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <Toolbar />
-      <div className="bg-white">
+      <div className="bg-white overflow-y-auto">
         <DataTable data={sampleData} />
       </div>
     </div>

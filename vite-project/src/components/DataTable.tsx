@@ -14,8 +14,8 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
   };
 
   const getStatusBgColor = (text: string) => {
-    if (text.includes('Run condition not met')) return 'bg-orange-50';
-    if (text.includes('An error occurred')) return 'bg-red-50';
+    // if (text.includes('Run condition not met')) return 'bg-orange-50';
+    // if (text.includes('An error occurred')) return 'bg-red-50';
     return 'bg-white';
   };
 
@@ -55,9 +55,7 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
             </th>
             <th className="px-4 py-3 text-left text-sm font-medium text-gray-900 bg-yellow-50 border-b border-gray-200">
               <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
+                <ChevronDown className="w-4 h-4" />
                 <span>WATERFALL - PEOPLE</span>
               </div>
             </th>
@@ -75,9 +73,7 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
             </th>
             <th className="px-4 py-3 text-left text-sm font-medium text-gray-900 bg-yellow-50 border-b border-gray-200">
               <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
+                <ChevronDown className="w-4 h-4" />
                 <span>WATERFALL - PEOPLE</span>
               </div>
             </th>
@@ -86,10 +82,10 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
         <tbody>
           {data.map((row) => (
             <tr key={row.id} className="hover:bg-gray-50">
-              <td className="sticky left-0 z-10 px-4 py-3 text-sm text-gray-500 bg-white border-b border-gray-200">
+              <td className="sticky left-0 z-10 px-4 py-3 text-sm text-gray-500 border-b border-gray-200">
                 {row.id}
               </td>
-              <td className="px-4 py-3 text-sm text-gray-900 border-b border-gray-200">
+              <td className="px-4 py-3 text-sm text-gray-900 border-b border-gray-200 bg-yellow-50">
                 <div className="flex items-center space-x-2">
                   <User className="w-4 h-4 text-gray-400" />
                   <span>{row.source}</span>
@@ -132,17 +128,6 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
                 <span className={getStatusColor(row.waterfallPeople2)}>
                   {row.waterfallPeople2}
                 </span>
-              </td>
-            </tr>
-          ))}
-          {/* Empty rows for visual spacing */}
-          {[15, 16].map((id) => (
-            <tr key={id} className="hover:bg-gray-50">
-              <td className="sticky left-0 z-10 px-4 py-3 text-sm text-gray-500 bg-white border-b border-gray-200">
-                {id}
-              </td>
-              <td className="px-4 py-3 text-sm text-gray-400 border-b border-gray-200" colSpan={8}>
-                {/* Empty cells */}
               </td>
             </tr>
           ))}
